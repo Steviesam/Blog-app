@@ -1,0 +1,95 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4; /* Light background for better contrast */
+  color: #333; /* Dark text color for readability */
+  line-height: 1.6; /* Improved line spacing */
+}
+
+/* Root Container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo Styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms, transform 300ms; /* Smooth transition for hover effects */
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Keyframes for Animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card Styles */
+.card {
+  background: white; /* Card background color */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 2em;
+  margin: 1.5em 0; /* Add vertical spacing between cards */
+  transition: box-shadow 300ms; /* Transition for shadow effect */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Link Styles */
+.read-the-docs {
+  color: #888; /* Gray text */
+  text-decoration: underline; /* Underline for emphasis */
+}
+
+.read-the-docs:hover {
+  color: #555; /* Darker color on hover */
+}
+
+/* Button Styles */
+.button {
+  padding: 0.8em 1.5em; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #646cff; /* Button background color */
+  color: white; /* Button text color */
+  font-size: 1em; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 300ms, transform 300ms; /* Smooth transitions */
+}
+
+.button:hover {
+  background-color: #5755d7; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
