@@ -2,19 +2,25 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #f4f4f9;
   color: #333;
+  margin: 0; /* Remove default margin */
+  min-height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column; /* Ensures footer sticks to the bottom */
 }
 
 header {
   background-color: #4a90e2;
   color: white;
-  padding: 10px 0;
-  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
 }
 
 header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Centering */
 }
 
 header nav a {
@@ -22,16 +28,19 @@ header nav a {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s; /* Smooth background and transform transition */
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:focus {
   background-color: #357ab7;
+  transform: translateY(-2px); /* Lift effect on hover */
 }
 
 .main-content {
   padding: 20px;
   text-align: center;
+  flex-grow: 1; /* Takes up all available space */
 }
 
 footer {
@@ -39,6 +48,7 @@ footer {
   color: white;
   padding: 20px 0;
   text-align: center;
+  margin-top: auto; /* Pushes footer to the bottom */
 }
 
 footer div {
@@ -53,4 +63,21 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+  color: #ffffff; /* Brighter color on hover for better visibility */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav a {
+    margin: 5px 0; /* Space between links in mobile view */
+  }
+
+  .main-content,
+  footer {
+    padding: 10px;
+  }
 }
